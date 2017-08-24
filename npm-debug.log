@@ -1,0 +1,153 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/7.5.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@4.1.2
+3 info using node@v7.5.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/abcplusd/Desktop/reactJs/react-image-viewer',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/abcplusd/.npm/react-image-viewer/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/abcplusd/.npm correctMkdir not in flight; initializing
+10 info lifecycle react-image-viewer@1.0.0~prepublish: react-image-viewer@1.0.0
+11 silly lifecycle react-image-viewer@1.0.0~prepublish: no script for prepublish, continuing
+12 info lifecycle react-image-viewer@1.0.0~prepare: react-image-viewer@1.0.0
+13 silly lifecycle react-image-viewer@1.0.0~prepare: no script for prepare, continuing
+14 verbose tar pack [ '/Users/abcplusd/.npm/react-image-viewer/1.0.0/package.tgz',
+14 verbose tar pack   '/Users/abcplusd/Desktop/reactJs/react-image-viewer' ]
+15 verbose tarball /Users/abcplusd/.npm/react-image-viewer/1.0.0/package.tgz
+16 verbose folder /Users/abcplusd/Desktop/reactJs/react-image-viewer
+17 verbose addLocalTarball adding from inside cache /Users/abcplusd/.npm/react-image-viewer/1.0.0/package.tgz
+18 verbose correctMkdir /Users/abcplusd/.npm correctMkdir not in flight; initializing
+19 silly cache afterAdd react-image-viewer@1.0.0
+20 verbose afterAdd /Users/abcplusd/.npm/react-image-viewer/1.0.0/package/package.json not in flight; writing
+21 verbose correctMkdir /Users/abcplusd/.npm correctMkdir not in flight; initializing
+22 verbose afterAdd /Users/abcplusd/.npm/react-image-viewer/1.0.0/package/package.json written
+23 silly publish { name: 'react-image-viewer',
+23 silly publish   version: '1.0.0',
+23 silly publish   description: 'A simple react component for displaying an array of images',
+23 silly publish   main: 'lib/Blackbox.js',
+23 silly publish   author: { name: 'Pavittar singh' },
+23 silly publish   license: 'MIT',
+23 silly publish   repository:
+23 silly publish    { type: 'git',
+23 silly publish      url: 'git+https://github.com/singhpavittar/react-Image-viewer.git' },
+23 silly publish   dependencies:
+23 silly publish    { aphrodite: '^0.5.0',
+23 silly publish      'prop-types': '^15.5.8',
+23 silly publish      'react-transition-group': '^1.1.3',
+23 silly publish      'react-scrolllock': '^1.0.5' },
+23 silly publish   devDependencies:
+23 silly publish    { 'babel-eslint': '^6.0.4',
+23 silly publish      babel: '^6.5.2',
+23 silly publish      'eslint-config-keystone': '2.2.0',
+23 silly publish      'eslint-plugin-react': '5.1.1',
+23 silly publish      eslint: '2.9.0',
+23 silly publish      gulp: '^3.9.0',
+23 silly publish      'react-component-gulp-tasks': '^0.7.0',
+23 silly publish      'react-dom': '^15.3.0',
+23 silly publish      react: '^15.3.0' },
+23 silly publish   peerDependencies: { 'react-dom': '^0.14 || ^15.0', react: '^0.14 || ^15.0' },
+23 silly publish   'browserify-shim': { react: 'global:React' },
+23 silly publish   scripts:
+23 silly publish    { build: 'gulp clean && NODE_ENV=production gulp build',
+23 silly publish      bump: 'gulp bump',
+23 silly publish      'bump:major': 'gulp bump:major',
+23 silly publish      'bump:minor': 'gulp bump:minor',
+23 silly publish      examples: 'gulp dev:server',
+23 silly publish      lint: 'eslint src/** examples/src/app.js examples/src/components/Gallery.js',
+23 silly publish      'publish:examples': 'gulp publish:examples',
+23 silly publish      release: 'gulp release',
+23 silly publish      start: 'gulp dev',
+23 silly publish      watch: 'gulp watch:lib' },
+23 silly publish   bugs: { url: 'https://github.com/singhpavittar/react-Image-viewer/issues' },
+23 silly publish   keywords:
+23 silly publish    [ 'react',
+23 silly publish      'react-component',
+23 silly publish      'react-image-viewer',
+23 silly publish      'react-blackbox-image-viewer',
+23 silly publish      'react-carousel',
+23 silly publish      'react-gallery',
+23 silly publish      'react images',
+23 silly publish      'react blackbox',
+23 silly publish      'react carousel',
+23 silly publish      'react gallery',
+23 silly publish      'blackbox',
+23 silly publish      'carousel',
+23 silly publish      'gallery' ],
+23 silly publish   readme: '# React Images Viewer\n\nA simple react component for displaying an array of images.\n\n\n### Quick start\n\n\n```bash\nnpm install --save react-image-viewer\n```\n\n```jsx\nimport React from \'react\';\nimport Blackbox from \'react-image-viewer\';\n\nexport default class Example extends React.Component {\n  ...\n  render() {\n    return (\n      <Blackbox\n        images={[{ src: \'http://example.com/img1.jpg\' }, { src: \'http://example.com/img2.jpg\' }]}\n        isOpen={this.state.blackBoxIsOpen}\n        onClickPrev={this.gotoPrevious}\n        onClickNext={this.gotoNext}\n        onClose={this.closeBlackbox}\n      />\n    );\n  }\n}\n```\n\nTo build the examples locally, run:\n\n```\nnpm install\nnpm start\n```\n\nThen open [`localhost:8000`](http://localhost:8000) in a browser.\n\nExample using caption for the first image:\n\n```jsx\n<Blackbox\n  images={Blackbox_IMAGE_SET}\n  ...\n/>\n\nconst BlackBox_IMAGE_SET = [\n  {\n    src: \'http://example.com/example/img1.jpg\',\n    caption: \'Sydney, Australia - Photo by Jill Smith\',\n  },\n  {\n    src: \'http://example.com/example/img2.jpg\',\n  }\n];\n\n```\n\n## Options\n\nProperty\t|\tType\t\t|\tDefault\t\t|\tDescription\n:-----------------------|:--------------|:--------------|:--------------------------------\nbackdropClosesModal\t|\tbool\t|\tfalse\t|\tAllow users to exit the blackbox by clicking the backdrop\ncloseButtonTitle | string | \' Close (Esc) \' | Customize close esc title\nenableKeyboardInput | bool  | true  | Supports keyboard input - <code>esc</code>, <code>arrow left</code>, and <code>arrow right</code>\ncurrentImage  | number  | 0 | The index of the image to display initially\ncustomControls | array | undefined | An array of elements to display as custom controls on the top of blackbox\nimages  | array | undefined | Required. An array of objects containing valid src and srcset values of img element\nimageCountSeparator  | String  | \' of \' | Customize separator in the image count\nisOpen  | bool  | false | Whether or not the blackbox is displayed\nleftArrowTitle | string | \' Previous (Left arrow key) \' | Customize of left arrow title\nonClickPrev | func | undefined | Fired on request of the previous image\nonClickNext | func | undefined | Fired on request of the next image\nonClose | func | undefined | Required. Handle closing of the blackbox\nonClickImage | func | undefined | Handle click on image\nonClickThumbnail | func | undefined | Handle click on thumbnail\npreloadNextImage | bool | true | Based on the direction the user is navigating, preload the next available image\nrightArrowTitle | string | \' Next (Right arrow key) \' | Customize right arrow title\nshowCloseButton | bool  | true | Optionally display a close "X" button in top right corner\nshowImageCount | bool  | true | Optionally display image index, e.g., "3 of 20"\nwidth | number  | 1024 | Maximum width of the carousel; defaults to 1024px\nhideArrow | bool | false | Show image arrow to change images\n',
+23 silly publish   readmeFilename: 'README.md',
+23 silly publish   gitHead: 'c422ccd22945d626ff3629e33291a80eca905b27',
+23 silly publish   homepage: 'https://github.com/singhpavittar/react-Image-viewer#readme',
+23 silly publish   _id: 'react-image-viewer@1.0.0',
+23 silly publish   _shasum: '550d6ee1f5ef9ef4b7ed339bbd73fb76f7a01c92',
+23 silly publish   _from: '.' }
+24 info lifecycle react-image-viewer@1.0.0~prepublishOnly: react-image-viewer@1.0.0
+25 silly lifecycle react-image-viewer@1.0.0~prepublishOnly: no script for prepublishOnly, continuing
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name react-image-viewer
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'react-image-viewer',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'react-image-viewer',
+30 silly mapToRegistry   name: 'react-image-viewer',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/react-image-viewer
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /Users/abcplusd/.npm/react-image-viewer/1.0.0/package.tgz
+34 verbose request uri https://registry.npmjs.org/react-image-viewer
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 3:55:49 PM
+37 verbose request using bearer token for auth
+38 verbose request id 83a631bb97a385e5
+39 http request PUT https://registry.npmjs.org/react-image-viewer
+40 http 403 https://registry.npmjs.org/react-image-viewer
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '112',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Thu, 24 Aug 2017 10:25:51 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-sin18028-SIN',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1503570350.661215,VS0,VE1672',
+41 verbose headers   vary: 'Accept-Encoding, Accept' }
+42 verbose request invalidating /Users/abcplusd/.npm/registry.npmjs.org/react-image-viewer on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: You do not have permission to publish "react-image-viewer". Are you logged in as the correct user? : react-image-viewer
+44 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:304:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:292:14)
+44 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:212:14)
+44 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:192:7)
+44 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:189:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+45 verbose statusCode 403
+46 verbose pkgid react-image-viewer
+47 verbose cwd /Users/abcplusd/Desktop/reactJs/react-image-viewer
+48 error Darwin 16.7.0
+49 error argv "/usr/local/Cellar/node/7.5.0/bin/node" "/usr/local/bin/npm" "publish"
+50 error node v7.5.0
+51 error npm  v4.1.2
+52 error code E403
+53 error You do not have permission to publish "react-image-viewer". Are you logged in as the correct user? : react-image-viewer
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]
