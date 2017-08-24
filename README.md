@@ -7,7 +7,7 @@ A simple react component for displaying an array of images.
 
 
 ```bash
-npm install --save react-image-viewer
+npm install --save react-blackbox
 ```
 
 ```jsx

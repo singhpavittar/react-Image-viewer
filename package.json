@@ -1,6 +1,6 @@
 {
-  "name": "react-image-viewer",
-  "version": "1.0.0",
+  "name": "react-blackbox",
+  "version": "1.0.1",
   "description": "A simple react component for displaying an array of images",
   "main": "lib/Blackbox.js",
   "author": "Pavittar singh",
